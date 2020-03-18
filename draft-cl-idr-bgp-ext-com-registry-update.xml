@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- This template is for creating an Internet Draft using xml2rfc,
+    which is available here: http://xml.resource.org. -->
+<!DOCTYPE rfc SYSTEM "rfc2629-xhtml.ent"[ 
+]>
+<?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
+<!-- used by XSLT processors -->
+<!-- For a complete list and description of processing instructions (PIs), 
+    please see http://xml.resource.org/authoring/README.html. -->
+<rfc
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      category="std"
+      docName="draft-cl-idr-bgp-ext-com-registry-update-00"
+      ipr="trust200902"
+      obsoletes=""
+      updates="7153"
+      submissionType="IETF"
+      xml:lang="en"
+      tocInclude="true"
+      tocDepth="4"
+      symRefs="true"
+      sortRefs="true"
+      version="3">
+  <!-- xml2rfc v2v3 conversion 2.38.1 -->
+  <!-- category values: std, bcp, info, exp, and historic
+    ipr values: trust200902, noModificationTrust200902, noDerivativesTrust200902,
+       or pre5378Trust200902
+    you can add the attributes updates="NNNN" and obsoletes="NNNN" 
+    they will automatically be output with "(if approved)" -->
+
+ <!-- ***** FRONT MATTER ***** -->
+
+ <front>
+    <!-- The abbreviated title is used in the page header - it is only necessary if the 
+        full title is longer than 39 characters -->
+
+   <title abbrev="BGP Ext. Com. Registries Update" >BGP Extended Community Registries Update</title>
+   <seriesInfo name="Internet-Draft" value="draft-cl-idr-bgp-ext-com-registry-update-00"/>
+   <author fullname="Christoph Loibl" surname="Loibl">
+     <organization>Next Layer Communications</organization>
+     <address>
+       <postal>
+         <street>Mariahilfer Guertel 37/7</street>
+         <city>Vienna</city>
+         <region></region>
+         <code>1150</code>
+         <country>AT</country>
+       </postal>
+       <phone>+43 664 1176414</phone>
+       <email>cl@tix.at</email>
+     </address>
+   </author>
+
+    <date year="2020"/>
+    <!-- If the month and year are both specified and are the current ones, xml2rfc will fill 
+        in the current day for you. If only the current year is specified, xml2rfc will fill 
+	 in the current day and month for you. If the year is not the current one, it is 
+	 necessary to specify at least a month (xml2rfc assumes day="1" if not specified for the 
+	 purpose of calculating the expiry date).  With drafts it is normally sufficient to 
+	 specify just the year. -->
+
+   <!-- Meta-data Declarations -->
+
+   <area>Routing Area</area>
+    <workgroup>IDR Working Group</workgroup>
+    <!-- WG name at the upperleft corner of the doc,
+        IETF is fine for individual submissions.  
+	 If this element is not present, the default is "Network Working Group",
+        which is used by the RFC Editor as a nod to the history of the IETF. -->
+    <keyword>RFC</keyword>
+    <keyword>Request for Comments</keyword>
+    <keyword>I-D</keyword>
+    <keyword>Internet-Draft</keyword>
+    <keyword>IANA</keyword>
+
+    <!-- Keywords will be incorporated into HTML output
+        files in a meta tag but they have no effect on text or nroff
+        output. If you submit your draft to the RFC Editor, the
+        keywords will be used for the search engine. -->
+
+   <abstract>
+      <t>
+        This document updates several BGP Extended Community registries in order to
+        replace the "Experimental Use" registration procedure in some entries, since
+        their use is clearly not experimental and thus misleading.
+      </t>
+      <t>
+        This document updates RFC7153.
+      </t>
+    </abstract>
+  </front>
+  <middle>
+   <section>
+     <name>Introduction</name>
+     <t>
+     <xref target="RFC7153" /> reorganizes the IANA registries for the type values and
+     sub-type values of the BGP Extended Communities attribute. As a result the IANA maintained 
+     registry entitled "BGP Transitive Extended Community Types" includes a range of Type Values (0x80-0x8F) 
+     with Experimental Use registration procedure. Out of this experimental range the types 0x80, 0x81, 0x82 have 
+     been assigned via <xref target="RFC5575" /> and <xref target="RFC7674" />. The primary use 
+     for those types and sub-type registries is non experimental. 
+     </t>
+     <t>
+     <xref target="IANA" /> of this document requests the registry cleanup to reflect the 
+     actual use of those code-points (removing "Experimental Use" from the sub-type registry names) 
+     and changes the registration procedure of the types 0x80, 0x81, 0x82 to first come first serve. 
+     </t>
+   </section>
+   <section anchor="IANA" numbered="true" toc="default">
+      <name>IANA Considerations</name>
+      <section>
+      <name>Registry: BGP Transitive Extended Community Types</name>
+      <t>IANA maintains a registry entitled "BGP Transitive Extended Community Types". IANA is requested
+      to update the Name of the Type Values according to <xref target="iana_ext_comm_types" /> and 
+      append a reference to this document to the existing references.  
+      </t>
+
+      <table anchor="iana_ext_comm_types">
+        <name>Registry: BGP Transitive Extended Community Types</name>
+            <thead>
+              <tr>
+                <th>Type Value</th>
+                <th>Name</th>
+                <th>Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  0x80
+                </td>
+                <td>
+                  Generic Transitive Extended Community 
+                  (Sub-Types are defined in the "Generic Transitive 
+                  Extended Community Sub-Types" Registry)
+                </td>
+                <td>
+                  [add this document]
+                </td>
+              </tr>
+              <tr>
+                <td>0x81</td>
+                <td>
+                  Generic Transitive Extended Community Part 2 
+                  (Sub-Types are defined in the "Generic Transitive 
+                  Extended Community Part 2 Sub-Types" Registry)
+                </td>
+                <td>[add this document]</td>
+              </tr>
+              <tr>
+                <td>0x82</td>
+                <td>
+                  Generic Transitive Extended Community Part 3
+                  (Sub-Types are defined in the "Generic Transitive
+                  Extended Community Part 3 Sub-Types" Registry)
+                </td>
+                <td>[add this document]</td>
+              </tr>
+            </tbody>
+      </table>
+
+      <t>Furthermore IANA is requested to change the registration procedures of this registry of Type Values 0x80 thru 0x82
+         to First Come First Serve. The resulting Registration Procedures should read as in 
+         <xref target="iana_ext_comm_types_regproc"/>.
+      </t>
+
+      <table anchor="iana_ext_comm_types_regproc" >
+            <name>Registration Procedures: BGP Transitive Extended Community Types</name>
+            <thead>
+              <tr>
+                <th align="left">Range</th>
+                <th align="left">Registration Procedures</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0x00-0x3f</td>
+                <td>
+                  First Come First Served
+                </td>
+              </tr>
+              <tr>
+                <td>0x80-0x82</td>
+                <td>
+                  First Come First Served (see [this document])
+                </td>
+              </tr>
+              <tr>
+                <td>0x83-0x8f</td>
+                <td>
+                  Reserved for Experimental Use (see [RFC3692])
+                </td>
+              </tr>
+              <tr>
+                <td>0x90-0xbf</td>
+                <td>
+                  Standards Action
+                </td>
+              </tr>
+            </tbody>
+      </table>
+      </section>
+      <section>
+        <name>Registry: Generic Transitive Experimental Use Extended Community Sub-Types</name>
+        <t>IANA maintains a registry entitled "Generic Transitive Experimental Use Extended Community Sub-Types". 
+        IANA is requested update the registry title to:
+        </t>
+        <ul empty="true" spacing="normal">
+          <li>"Generic Transitive Extended Community Sub-Types"</li>
+        </ul>
+      </section>
+      <section>
+        <name>Registry: Generic Transitive Experimental Use Extended Community Part 2 Sub-Types</name>
+        <t>IANA maintains a registry entitled "Generic Transitive Experimental Use Extended Community Part 2 Sub-Types". 
+        IANA is requested update the registry title to:
+        </t>
+        <ul empty="true" spacing="normal">
+          <li>"Generic Transitive Extended Community Part 2 Sub-Types"</li>
+        </ul>
+      </section>
+      <section>
+        <name>Registry: Generic Transitive Experimental Use Extended Community Part 3 Sub-Types</name>
+        <t>IANA maintains a registry entitled "Generic Transitive Experimental Use Extended Community Part 3 Sub-Types". 
+        IANA is requested update the registry title to:
+        </t>
+        <ul empty="true" spacing="normal">
+          <li>"Generic Transitive Extended Community Part 3 Sub-Types"</li>
+        </ul>
+      </section>
+    </section>
+    <section anchor="Security" numbered="true" toc="default">
+      <name>Security Considerations</name>
+      <t> There are no direct security considerations arising from this document. </t>
+    </section>
+    <section anchor="Acknowledgements" numbered="true" toc="default">
+      <name>Acknowledgements</name>
+      <t>The author wants to thank Alvaro Retana, who pointed out, that the IANA registry contains  
+       misleading entries in this context.
+      </t>
+    </section>
+
+
+  </middle>
+  <!--  *****BACK MATTER ***** -->
+
+ <back>
+    <!-- References split into informative and normative -->
+
+   <!-- There are 2 ways to insert reference entries from the citation libraries:
+    1. define an ENTITY at the top, and use "ampersand character"RFC2629; here (as shown)
+    2. simply use a PI "less than character"?rfc include="reference.RFC.2119.xml"?> here
+       (for I-Ds: include="reference.I-D.narten-iana-considerations-rfc2434bis.xml")
+
+    Both are cited textually in the same manner: by using xref elements.
+    If you use the PI option, xml2rfc will, by default, try to find included files in the same
+    directory as the including file. You can also define the XML_LIBRARY environment variable
+    with a value containing a set of directories to search.  These can be either in the local
+    filing system or remote ones accessed by http (http://domain/dir/... ).-->
+
+   <references>
+      <name>References</name>
+      <references>
+        <name>Normative References</name>
+        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.7153.xml" ?>
+        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.8126.xml" ?>
+      </references>
+      <references>
+        <name>Informative References</name>
+        <!-- Here we use entities that we defined at the beginning. -->
+        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.5575.xml" ?>
+        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.7674.xml" ?>
+
+      </references>
+    </references>
+        <!-- A reference written by by an organization not a person. -->
+ </back>
+</rfc>
