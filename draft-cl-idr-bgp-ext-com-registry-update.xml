@@ -35,9 +35,9 @@
         full title is longer than 39 characters -->
 
    <title abbrev="BGP Ext. Com. Registries Update" >BGP Extended Community Registries Update</title>
-   <seriesInfo name="Internet-Draft" value="draft-cl-idr-bgp-ext-com-registry-update-00"/>
+   <seriesInfo name="Internet-Draft" value="draft-cl-idr-bgp-ext-com-registry-update-01"/>
    <author fullname="Christoph Loibl" surname="Loibl">
-     <organization>Next Layer Communications</organization>
+     <organization>next layer Telekom GmbH</organization>
      <address>
        <postal>
          <street>Mariahilfer Guertel 37/7</street>
