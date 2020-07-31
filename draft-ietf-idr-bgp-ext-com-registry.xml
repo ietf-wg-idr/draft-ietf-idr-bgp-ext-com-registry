@@ -10,7 +10,7 @@
 <rfc
       xmlns:xi="http://www.w3.org/2001/XInclude"
       category="std"
-      docName="draft-cl-idr-bgp-ext-com-registry-update-01"
+      docName="draft-ietf-idr-bgp-ext-com-registry-00"
       ipr="trust200902"
       obsoletes=""
       updates="7153"
@@ -35,7 +35,7 @@
         full title is longer than 39 characters -->
 
    <title abbrev="BGP Ext. Com. Registries Update" >BGP Extended Community Registries Update</title>
-   <seriesInfo name="Internet-Draft" value="draft-cl-idr-bgp-ext-com-registry-update-01"/>
+   <seriesInfo name="Internet-Draft" value="draft-ietf-idr-bgp-ext-com-registry-00"/>
    <author fullname="Christoph Loibl" surname="Loibl">
      <organization>next layer Telekom GmbH</organization>
      <address>
