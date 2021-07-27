@@ -10,7 +10,7 @@
 <rfc
       xmlns:xi="http://www.w3.org/2001/XInclude"
       category="std"
-      docName="draft-ietf-idr-bgp-ext-com-registry-01"
+      docName="draft-ietf-idr-bgp-ext-com-registry-02"
       ipr="trust200902"
       obsoletes=""
       updates="7153"
@@ -97,7 +97,7 @@
      sub-type values of the BGP Extended Communities attribute. As a result the IANA maintained 
      registry entitled "BGP Transitive Extended Community Types" includes a range of Type Values (0x80-0x8F) 
      with Experimental Use registration procedure. Out of this experimental range the types 0x80, 0x81, 0x82 have 
-     been assigned via <xref target="RFC5575" /> and <xref target="RFC7674" />. The primary use 
+     been assigned via <xref target="RFC8955" />. The primary use 
      for those types and sub-type registries is non experimental. 
      </t>
      <t>
@@ -267,8 +267,7 @@
       <references>
         <name>Informative References</name>
         <!-- Here we use entities that we defined at the beginning. -->
-        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.5575.xml" ?>
-        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.7674.xml" ?>
+        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.8955.xml" ?>
 
       </references>
     </references>
