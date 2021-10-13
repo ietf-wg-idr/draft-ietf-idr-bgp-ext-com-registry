@@ -10,7 +10,7 @@
 <rfc
       xmlns:xi="http://www.w3.org/2001/XInclude"
       category="std"
-      docName="draft-ietf-idr-bgp-ext-com-registry-02"
+      docName="draft-ietf-idr-bgp-ext-com-registry-03"
       ipr="trust200902"
       obsoletes=""
       updates="7153"
@@ -96,14 +96,16 @@
      <xref target="RFC7153" /> reorganizes the IANA registries for the type values and
      sub-type values of the BGP Extended Communities attribute. As a result the IANA maintained 
      registry entitled "BGP Transitive Extended Community Types" includes a range of Type Values (0x80-0x8F) 
-     with Experimental Use registration procedure. Out of this experimental range the types 0x80, 0x81, 0x82 have 
-     been assigned via <xref target="RFC8955" />. The primary use 
-     for those types and sub-type registries is non experimental. 
+     reserved for Experimental Use. Out of this experimental range the types 0x80, 0x81, 0x82 have 
+     been used in <xref target="RFC5575" /> and <xref target="RFC7674" /> (both documents rendered 
+     Obsolete by <xref target="RFC8955" />). The primary use for those types and sub-type registries 
+     is non experimental. 
      </t>
      <t>
      <xref target="IANA" /> of this document requests the registry cleanup to reflect the 
      actual use of those code-points (removing "Experimental Use" from the sub-type registry names) 
-     and changes the registration procedure of the types 0x80, 0x81, 0x82 to first come first serve. 
+     and changes the registration procedure of the types 0x80, 0x81, 0x82 to use the First Come First Served
+     policy <xref target="RFC8126" /> and thus updates <xref target="RFC7153" />.
      </t>
    </section>
    <section anchor="IANA" numbered="true" toc="default">
@@ -160,7 +162,7 @@
       </table>
 
       <t>Furthermore IANA is requested to change the registration procedures of this registry of Type Values 0x80 thru 0x82
-         to First Come First Serve. The resulting Registration Procedures should read as in 
+         to First Come First Served <xref target="RFC8126" />. The resulting Registration Procedures should read as in 
          <xref target="iana_ext_comm_types_regproc"/>.
       </t>
 
@@ -234,7 +236,7 @@
     </section>
     <section anchor="Acknowledgements" numbered="true" toc="default">
       <name>Acknowledgements</name>
-      <t>The author wants to thank Alvaro Retana, who pointed out, that the IANA registry contains  
+      <t>The author wants to thank Alvaro Retana who pointed out, that the IANA registry contains  
        misleading entries in this context.
       </t>
     </section>
@@ -267,8 +269,10 @@
       <references>
         <name>Informative References</name>
         <!-- Here we use entities that we defined at the beginning. -->
+        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.3692.xml" ?>
+        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.5575.xml" ?>
+        <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.7674.xml" ?>
         <?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.8955.xml" ?>
-
       </references>
     </references>
         <!-- A reference written by by an organization not a person. -->
