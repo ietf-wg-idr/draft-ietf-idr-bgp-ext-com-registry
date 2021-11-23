@@ -10,10 +10,10 @@
 <rfc
       xmlns:xi="http://www.w3.org/2001/XInclude"
       category="std"
-      docName="draft-ietf-idr-bgp-ext-com-registry-03"
+      docName="draft-ietf-idr-bgp-ext-com-registry-04"
       ipr="trust200902"
       obsoletes=""
-      updates="7153"
+      updates="7153 8955"
       submissionType="IETF"
       xml:lang="en"
       tocInclude="true"
@@ -85,7 +85,7 @@
         their use is clearly not experimental and thus misleading.
       </t>
       <t>
-        This document updates RFC7153.
+        This document updates RFC7153 and RFC8955.
       </t>
     </abstract>
   </front>
@@ -105,7 +105,7 @@
      <xref target="IANA" /> of this document requests the registry cleanup to reflect the 
      actual use of those code-points (removing "Experimental Use" from the sub-type registry names) 
      and changes the registration procedure of the types 0x80, 0x81, 0x82 to use the First Come First Served
-     policy <xref target="RFC8126" /> and thus updates <xref target="RFC7153" />.
+     policy <xref target="RFC8126" /> and thus updates <xref target="RFC7153" /> and <xref target="RFC8955" />.
      </t>
    </section>
    <section anchor="IANA" numbered="true" toc="default">
@@ -205,7 +205,7 @@
       <section>
         <name>Registry: Generic Transitive Experimental Use Extended Community Sub-Types</name>
         <t>IANA maintains a registry entitled "Generic Transitive Experimental Use Extended Community Sub-Types". 
-        IANA is requested update the registry title to:
+        IANA is requested to update the registry title to:
         </t>
         <ul empty="true" spacing="normal">
           <li>"Generic Transitive Extended Community Sub-Types"</li>
@@ -214,7 +214,7 @@
       <section>
         <name>Registry: Generic Transitive Experimental Use Extended Community Part 2 Sub-Types</name>
         <t>IANA maintains a registry entitled "Generic Transitive Experimental Use Extended Community Part 2 Sub-Types". 
-        IANA is requested update the registry title to:
+        IANA is requested to update the registry title to:
         </t>
         <ul empty="true" spacing="normal">
           <li>"Generic Transitive Extended Community Part 2 Sub-Types"</li>
@@ -223,7 +223,7 @@
       <section>
         <name>Registry: Generic Transitive Experimental Use Extended Community Part 3 Sub-Types</name>
         <t>IANA maintains a registry entitled "Generic Transitive Experimental Use Extended Community Part 3 Sub-Types". 
-        IANA is requested update the registry title to:
+        IANA is requested to update the registry title to:
         </t>
         <ul empty="true" spacing="normal">
           <li>"Generic Transitive Extended Community Part 3 Sub-Types"</li>
